@@ -22,7 +22,7 @@ namespace Distributeur_cafe
                                 {1,2,1,2,0},
                                 {0,2,0,0,1}};
 
-            Console.WriteLine("Bienvenue au distributeur de café :");
+            Console.WriteLine("Bienvenue au distributeur de café !");
             while (true)
             {
                 Console.WriteLine("\nChoisir le numéro de la boisson : ");
@@ -51,6 +51,12 @@ namespace Distributeur_cafe
                     Console.WriteLine("\n========================================");
                     Console.WriteLine("Le prix de " + Boissons[index] + " est de " +prix_totale+" euros");
                     Console.WriteLine("========================================");
+                    Console.Write("Ecrire 'oui' pour choisir une autre boisson : ");
+                    string answer = Console.ReadLine();
+                    if (!answer.ToLower().Equals("oui"))
+                    {
+                        break;
+                    }
                 }
                 catch
                 {
